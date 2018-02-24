@@ -8,6 +8,8 @@ from keras.optimizers import Adam
 batch_size = 100
 nb_epoch = 250
 
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "4"
 def main():
 	train_X = np.load('train_X.npy')
 	train_y = np.load('train_y.npy')
