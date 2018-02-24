@@ -28,7 +28,7 @@ def get_dataset(NData, numberfile, NMax, img_sz):
     label[i,:] = get_img(nres, img_sz).flatten()
     f.write(str(n1) + " " + str(n2) + " " + str(nres) + "\n")  
     if i%100 == 0:
-      print "Frame: " + str(i)
+      print("Frame: " + str(i))
   f.close()
   return data, label
 
@@ -36,7 +36,7 @@ def main():
   NMax = 4999999
   img_sz = (15,60)
 
-  print "Generate data:"
+  print("Generate data:")
   train_data, train_label = get_dataset(30000, 'train_numbers.txt', NMax, img_sz)
   test_data, test_label = get_dataset(30000, 'test_numbers.txt', NMax, img_sz)
 
