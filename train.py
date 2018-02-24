@@ -27,7 +27,7 @@ def main():
 	model.add(Dense(900))
 	model.add(Activation('sigmoid'))
 
-	print model.summary()
+	print(model.summary())
 
 	adam = Adam(0.001)
 	#adagrad = Adagrad(lr=0.01)
